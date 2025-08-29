@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  ubuntu-docker:
+    container_name: "ubuntu-docker"
+    build: .
+    image: localhost/myubuntu:latest
+    ports:
+      - "2222:22"
+    volumes:
+      - ./data:/root
+    command: ["/usr/sbin/sshd", "-D"]
