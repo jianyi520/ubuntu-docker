@@ -2,7 +2,7 @@ FROM docker.1ms.run/library/ubuntu:latest
 RUN apt update && \
     apt install -y busybox vim curl git && \
     apt install -y flex bison libssh-dev libelf-dev cpio bc proxychains  && \ 
-    apt install -y gcc-aarch64-linux-gnu g++-aarch64-linux-gnu && \
+    apt install -y libdw-dev gcc-aarch64-linux-gnu g++-aarch64-linux-gnu && \
     apt install -y build-essential && \
     apt install -y openssh-server  && \
     mkdir -p /run/sshd && chmod 755 /run/sshd 
